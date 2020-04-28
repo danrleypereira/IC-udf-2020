@@ -90,8 +90,7 @@
 \tipotrabalho{Projeto de Pesquisa}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\preambulo{Modelo canônico de Projeto de pesquisa em conformidade
-com as normas ABNT apresentado à comunidade de usuários \LaTeX.}
+\preambulo{Projeto de pesquisa submetido ao edital de iniciação científica de 2020 do Centro Universitário do Distrito Federal (UDF).}
 % ---
 
 % ---
@@ -190,8 +189,13 @@ com as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % inserir lista de abreviaturas e siglas
 % ---
 \begin{siglas}
-  \item[ABNT] Associação Brasileira de Normas Técnicas
-  \item[abnTeX] ABsurdas Normas para TeX
+  \item[COVID-19] Coronavirus Disease 2019
+  \item[DF] Distrito Federal
+  \item[EAD] Educação a Distância
+  \item[IES] Instituição de Ensino Superior
+  \item[SARS-CoV-2] Severe Acute Respiratory Syndrome Coronavirus 2
+  \item[SARS] Severe Acute Respiratory Syndrome
+  \item[TIC] Tecnologias de Informação e Comunicação
 \end{siglas}
 % ---
 
@@ -223,19 +227,63 @@ com as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % ----------------------------------------------------------
 % Introdução
 % ----------------------------------------------------------
-\chapter*[Introdução]{Introdução}
+\chapter*[Introdução]{Introdução} \label{introduction}
 \addcontentsline{toc}{chapter}{Introdução}
 
-Este documento e seu código-fonte são exemplos de referência de uso da classe
-\textsf{abntex2} e do pacote \textsf{abntex2cite}. O documento 
-exemplifica a elaboração de projetos de pesquisa produzidos
-conforme a ABNT NBR 15287:2011 \emph{Informação e documentação - Projeto de
-pesquisa - Apresentação}. 
+O presente projeto de pesquisa tem como tema o uso da Educação a Distância (EAD)\index{EAD} em tempos de pandemia \index{pandemia} do \textit{coronavirus disease 2019} (COVID-19) \index{COVID-19}. Os estudantes do ensino superior \index{ensino!superior} presencial 
+estão enfrentado um momento delicado, o isolamento social \index{isolamento social}, ou seja, eles precisam modificar hábitos para se adaptarem à EAD \cite{zhou2020school}; e para passar por esse momento eles precisam de apoio da Instituição de 
+Ensino Superior (IES) na qual estão matriculados \cite{xie2020autonomous}. Como as IES's do Distrito Federal (DF) estão auxiliando os estudantes a continuarem construindo seu conhecimento nesse 
+momento de disrupção da educação e como as próprias IES's estão adaptando sua forma de ensino, seus materiais e seus departamentos de atendimento aos estudantes para melhor atendê-los ?
 
-A expressão ``Modelo canônico'' é utilizada para indicar que \abnTeX\ não é
-modelo específico de nenhuma universidade ou instituição, mas que implementa tão
-somente os requisitos das normas da ABNT. Uma lista completa das normas
-observadas pelo \abnTeX\ é apresentada em \citeonline{abntex2classe}.
+Visando a viabilidade técnica e econômica do estudo, separou-se uma amostra de duas IES entre as 64 IES's do DF, dados adquiridos pelo censo da educação superior \index{censo da educação superior} realizado pelo \index{INEP}\citeonline{censoInep}. As duas 
+instituições de ensino, ``Instituição N'' e ``Instituição O'', já foram contactadas através de membros do corpo docente para participarem da pesquisa e para auxiliar na divulgação dos questionários para o corpo discente. 
+Ambas instituições se encontram em locais de fácil acesso e não oferecem risco técnico e financeiro a realização de visitas e reuniões com os participantes da pesquisa se necessário. \index{corpo!docente} \index{corpo!discente}
+
+A hipótese desse estudo é que as IES's têm tecnologias/softwares como meio de disponibilizar vídeos, materiais, fazer video chamadas entre os professores e os alunos, disponibilizar links e recursos educacionais\index{recurso educacional},
+ou seja, elas têm um ambiente virtual de aprendizagem \index{ambiente virtual de aprendizagem}. Mas, infelizmente, possibilitar a EAD e o aprendizado autônomo dos estudantes exige mais do que ter um ambiente virtual de aprendizagem, é necessário que as IES's 
+desenvolvam métodos de aconselhar academicamente os estudantes visando a efetivação e, posteriormente, a qualidade do estudo domiciliar \cite{xie2020autonomous}. Essa habilidade de aconselhar academicamente
+ será um dos pontos chave de sucesso ou falha das IES's em manter o ensino disruptivo \index{ensino!disruptivo} em meio a pandemia \index{pandemia} do COVID-19. 
+
+Para ficar claro os objetivos do presente trabalho, enumerar-se-á os mesmos a seguir:
+\begin{itemize}\label{objetivos}
+
+  \item \textit{Geral}: Identificar através de métodos quantitativos e qualitativos \index{abordagem!quantitativa} \index{abordagem!qualitativa} se as IES's estudadas conseguiram manter o ensino de maneira disruptiva durante o isolamento social\index{isolamento social} imposto focando o combate à pandemia \index{pandemia} do COVID-19.
+  \item \textit{Específico 01}: Analisar se os ambientes virtuais de aprendizagem\index{ambiente virtual de aprendizagem} das IES's estudadas são de fácil uso e se eles são capazes de ser um instrumento de ampliação de oportunidades educacionais \cite{elielCruz}.
+  \item \textit{Específico 02}: Identificar se houveram ações de aconselhamento acadêmico com foco em cultivar a habilidade de aprender em casa e melhorar a qualidade dos estudos em casa.
+  \item \textit{Específico 03}: Comparar de maneira quantitativa o aprendizado dos estudantes no ano de 2019 e 2020 (análise estatística).
+  \item \textit{Específico 04}: Analisar se os métodos normais de ensino foram simplesmente copiados ou se houve um trabalho de adaptação dos materiais e conteúdos para o ambiente virtual de aprendizagem;
+  \item \textit{Específico 05}: Alunos bolsistas ou usufrutuários de programas governamentais conseguiram usufruir dos recursos educacionais\index{recurso educacional} e efetivar a aprendizagem através do ambiente virtual de aprendizagem ?
+
+\end{itemize}
+
+COVID-19\index{COVID-19} é um termo que está sendo amplamente pesquisado no \index{Brasil}Brasil e no mundo \cite{googleTrends} durante os primeiros meses de 2020, no entanto, vale ressaltar, essa pesquisa está sendo geralmente realizada atrelada à saúde pessoal e coletiva. Porém, no atual momento de isolamento social\index{isolamento social} causado pela pandemia\index{pandemia} do COVID-19, é necessário fazer pesquisa científica atrelada as consequências sociais e políticas do isolamento, tema qual o presente trabalho busca chegar a um entendimento. O uso de 
+EAD\index{EAD} ou, até mesmo, ensino remoto síncrono em IES's tem que ser estudado para que haja referências para estudos futuros relacionados a pandemia, como quais foram as consequências e impactos para o ensino superior \index{ensino!superior} brasileiro. 
+Vale ressaltar que China\index{China}, Estados Unidos da América\index{Estados Unidos da América}, \index{Filipinas}Filipinas, \index{Indonésia}Indonésia, dentre outros, além de organizações multilaterais como a UNESCO\index{UNESCO}, já começaram a publicar artigos sobre o tema educação e COVID-19 no mês de março e 
+abril de 2020:
+
+\begin{itemize}
+
+  \item Autonomous learning of elementary students at home during the COVID-19 epidemic: A case study of the second elementary school in Daxie, Ningbo, Zhejiang Province, China \cite{xie2020autonomous};
+  \item Replacing the Classic Learning Form at Universities as an Immediate Response to the COVID-19 Virus Infection in Georgia \cite{georgia};
+  \item 'School’s Out, But Class’ On', The Largest Online Education in the World Today: Taking China’s Practical Exploration During The COVID-19 Epidemic Prevention and Control As an Example \cite{zhou2020school};
+  \item Sentiment Analysis on Synchronous Online Delivery of Instruction due to Extreme Community Quarantine in the Philippines caused by COVID-19 Pandemic \cite{pastor2020sentiment};
+  \item Using Technology to Maintain the Education of Residents During the COVID-19 Pandemic \cite{chick2020using}
+  \item The Impact of Covid-19\index{COVID-19} to Indonesian Education and Its Relation to the Philosophy of “Merdeka Belajar” \cite{abidah2020impact};
+  \item handbook-on-facilitating-flexible-learning-in-covid-19-outbreak \cite{huang2020handbook};
+  \item Public-Private Virtual-School Partnerships and Federal Flexibility for Schools during COVID-19 \cite{butcher2020public}.
+
+\end{itemize}
+
+Tantos artigos científicos sendo publicados em tão pouco tempo é um sinal claro da relevância de um estudo tal como o proposto aqui. 
+ 
+
+
+
+é necessário que as IES's analisem suas estratégias de orientação e se os materiais de orientação acadêmica são bem desenhados.
+
+
+A análise será feita através de 
+
 
 Sinta-se convidado a participar do projeto \abnTeX! Acesse o site do projeto em
 \url{http://www.abntex.net.br/}. Também fique livre para conhecer,
@@ -244,57 +292,90 @@ modificados tenham seus nomes alterados e que os créditos sejam dados aos
 autores originais, nos termos da ``The \LaTeX\ Project Public
 License''\footnote{\url{http://www.latex-project.org/lppl.txt}}.
 
-Encorajamos que sejam realizadas customizações específicas deste exemplo para
-universidades e outras instituições --- como capas, folhas de rosto, etc.
-Porém, recomendamos que ao invés de se alterar diretamente os arquivos do
-\abnTeX, distribua-se arquivos com as respectivas customizações.
-Isso permite que futuras versões do \abnTeX~não se tornem automaticamente
-incompatíveis com as customizações promovidas. Consulte
-\citeonline{abntex2-wiki-como-customizar} para mais informações.
-
-Este documento deve ser utilizado como complemento dos manuais do \abnTeX\ 
-\cite{abntex2classe,abntex2cite,abntex2cite-alf} e da classe \textsf{memoir}
-\cite{memoir}. Consulte \citeonline{abntex2modelo} para obter
-exemplos e informações adicionais de uso de \abnTeX\ e de \LaTeX.
-
-Esperamos, sinceramente, que o \abnTeX\ aprimore a qualidade do trabalho que
-você produzirá, de modo que o principal esforço seja concentrado no principal:
-na contribuição científica.
-
-Equipe \abnTeX 
-
-Lauro César Araujo
 
 % ----------------------------------------------------------
 % Capitulo de Referencial Teórico
 % ----------------------------------------------------------
 \chapter{Revisão de Literatura}
 
-\index{elementos textuais}A norma ABNT NBR 15287:2011, p. 5, apresenta a
-seguinte orientação quanto aos elementos textuais:
+Como já mencionado, o presente projeto de pesquisa busca entender o uso e a qualidade do uso da EAD\index{EAD} no momento de pandemia\index{pandemia} do COVID-19, com isso em mente fez-se uma expressão geral de busca expressão de busca de trabalhos acadêmicos em sítios como \url{http://www.scielo.com}, \url{http://scholar.google.com}, \url{https://www.researchgate.net}, \url{http://www.scielo.com} e \url{http://www.periodicocapes.com}; a expressão ``Educação a distância AND COVID-19'' não se fez útil na tentativa de encontrar trabalhos acadêmicos em português. Sem êxito, buscou-se a mesma expressão em inglês, obtendo melhor resultado. Como era de se esperar, os resultados são trabalhos acadêmicos recentes, todos datados do ano de 2020.  \index{COVID-19}
 
-Consulte as demais normas da série ``Informação e documentação'' da ABNT
-para outras informações. Uma lista com as principais normas dessa série, todas
-observadas pelo \abnTeX, é apresentada em \citeonline{abntex2classe}.
+Além dessa expressão de busca, fez-se necessário expressões de buscas como: ``Viable alternative AND distance education'' e ``COVID-19 OR Distance education''. Essas expressões fizeram-se necessárias para que os pesquisadores possam fazer um levantamento bibliográfico sobre cada tema separado, buscando-se propriedade sobre o tema de interesse do trabalho, visando sempre uma análise mais acurada para se obter maior qualidade no resultado da pesquisa.
+
+\section{COVID-19}
+
+COVID-19 é uma infecção respiratória causada pelo vírus\index{vírus} \textit{Severe Acute Respiratory Syndrome Coronavirus 2} (SARS-CoV-2)\index{SARS-CoV-2} \cite{desai2020stopping}, vírus que foi descoberto recentemente depois de contaminar em massa pessoas no estado de Wuhan-China\index{China}, em dezembro de 2019. SARS-CoV-2 pertence a uma família de vírus (corona-virus)\index{corona} que causam moléstias que vão desde o resfriado comum até as mais severas infecções em humanos.
+
+COVID-19 causa uma variedade de sintomas em pessoas que foram infectadas, e nem todas as pessoas infectadas terão os mesmo sintomas. Febre, tosse seca, dificuldade de respirar e fadiga são alguns dos sintomas mais comuns; entretanto, algumas pessoas apresentaram dores de cabeça, dores abdominais, diarreia e garganta inflamada \cite{desai2020stopping}. Muitas pessoas desenvolvem sintomas brandos ou nenhum sintoma; as mortes são associadas principalmente à pessoas idosas e/ou com doenças crônicas\index{doenças crônicas} \cite{watkins2020preventing}. 
+
+Modelos epidemiológicos\index{epidemiologia} básicos do avanço do vírus SARS-CoV-2 sugerem que, devido a sua alta contagiosidade e a falta de imunidade da população, 40 a 70 porcento da população poderá ser infectada a não ser que medidas duras sejam tomadas \cite{salathe2020covid}. Dois vírus\index{vírus} tiveram suas deflagrações encurtadas por uma política de \textit{catch-and-isolate} (pegar-e-isolar), o \textit{severe acute respiratory syndrome} (SARS)\index{SARS} em 2003 e o H1N1 (Influenza A)\index{H1N1} em 2009 \cite{watkins2020preventing}, ou seja, isolar as pessoas que foram contaminadas por esses vírus\index{vírus} foi eficaz para ambos os casos. Infelizmente, o COVID-19, mesmo adotando-se essa política mundo afora, continuou se espalhando, exigindo medidas mais drásticas dos governos, isolamento e distanciamento social\index{isolamento social}, fechando-se fronteiras e colocando países inteiros em quarentena. 
+
+\section{EAD}
+
+O desenvolvimento científico acelerado, associado ao crescente aumento da capacidade tecnológica, ampliou as possibilidades de atuação na área da educação. Dentre as possibilidades, temos a EAD como uma das que mais cresceram \cite{jorgeEad}. Para o presente estudo considerar-se-á a concepção de \citeonline{landim} para EAD, ou seja, a EAD pressupõe a combinação de tecnologias que possibilitem o estudo em qualquer lugar, por meio de métodos de orientação e tutoria à distância.
+
+O trabalho de \citeonline{jorgeEad}, deixa claro que o processo de ensino-aprendizagem\index{ensino!-aprendizagem} através da EAD só é concretizado quando o aluno tem habilidades específicas e o domínio das ferramentas utilizadas para transmissão do conhecimento. 
+
+\begin{citacao}
+Um dos pontos considerado positivo da EAD\index{EAD} é a possibilidade do acesso à informação a pessoas diversas em locais diversos geograficamente. No entanto, o processo de ensino-aprendizagem requer habilidades diferenciadas na apresentação, planejamento, desenvolvimento e avaliação da aprendizagem, bem como o domínio das ferramentas de transmissão a serem utilizadas. \cite{jorgeEad}
+\end{citacao}  
+
+Até pouco tempo atrás as Tecnologias de Informação e Comunicação (TIC\index{TIC}) não eram amplamente usadas no ensino superior\index{ensino!superior}, sendo utilizadas para propostas de ensino não presencial. Hoje em dia, essas tecnologias foram incorporadas na dinâmica do ensino universitário, gerando o que conhecemos como ambientes virtuais de aprendizagem\index{ambiente virtual de aprendizagem}. Esses ambientes são sistemas computacionais disponíveis na internet, que dão suporte as atividades utilizando-se as TIC, de acordo com o estudo de \citeonline{almeida2003educaccao} eles permitem ``integrar múltiplas mídias, linguagens e recursos, apresentar informações de maneira organizada, desenvolver interações entre pessoas e objetos de conhecimento, elaborar e socializar produções tendo em vista atingir determinados objetivos''.
+
+
+\section{Uso de EAD em meio a pandemia: uma alternativa}
+
+A principal referência que temos ao uso da EAD nesse momento de isolamento social\index{isolamento social} é a China\index{China}, que já vem encarando o COVID-19\index{COVID-19} desde de dezembro de 2019. O governo chinês lançou uma campanha nomeada ``School’s Out, But Class’ On'' durante a pandemia\index{pandemia}; \citeonline{zhou2020school} analizou a fundamentação e os possíveis impactos da campanha, focando nas recomendações do \index{Ministério da Educação da China}Ministério da Educação da China e as estratégias necessárias para que a campanha seja bem sucedida. Outro documento de caráter científico que podemos usar como referência é um estudo de caso de uma escola em Daxie-Ningbo na \index{Província de Zhejiang}Província de Zhejiang-China, um estudo de caso da campanha ``School’s Out, But Class’ On''\index{``School’s Out, But Class’ On''}.
+
+A partir dessas referências e devido as circuntâncias, é claro que a EAD\index{EAD} é uma alternativa viável em meio a pandemia\index{pandemia}, porém se faz necessário uma análise acurada para verificar se a construção do conhecimento foi efetuada. Essa análise tem que ser feita através de diferentes perspectivas:
+
+ \begin{itemize}
+
+  \item Tecnologia utilizada \cite{benakouche2000educaccao, almeida2003educaccao, georgia};
+  \item Adaptação dos conteúdos para a EAD \cite{xie2020autonomous, zhou2020school, benakouche2000educaccao};
+  \item Capacitação docente para uso da EAD \cite{benakouche2000educaccao};
+  \item Habilidade dos discentes (tecnológica e socioemocional) \cite{oranburg2020distance, arieira2009avaliaccao};
+  \item Estratégias de orientação \cite{xie2020autonomous, reich2020remote, zhou2020school}.
+
+\end{itemize}
+
+Tendo em vista todos os estudos citados, a verificação da qualidade do uso da EAD pode ser feita através de um estudo de caso em instituições reais.
+
+
+
+ se a decisão se encaixa, mesmo que de maneira genérica, para todas as IES's. 
+
+
+
+
 
 % ----------------------------------------------------------
 % Capitulo de Metodologia
 % ----------------------------------------------------------
 \chapter{Metodologia}
 
-\index{elementos textuais}A norma ABNT NBR 15287:2011, p. 5, apresenta a
-seguinte orientação quanto aos elementos textuais:
+Tendo em vista a necessidade de \index{isolamento social}isolamento social para diminuir o avanço do COVID-19\index{COVID-19}, a EAD\index{EAD} está sendo a escolha óbvia para manter o ensino disruptivo nas IES's do \index{Brasil}Brasil e do Mundo. No entanto, é necessário fazer uma análise baseada na literatura existente sobre o assunto para descobrir se as IES's conseguiram manter o \index{ensino!disruptivo}ensino disruptivo meio a pandemia\index{pandemia}. Para realizar essa análise o presente estudo utilizará uma abordagem quanti-qualitativa \index{abordagem!quantitativa} \index{abordagem!qualitativa} \cite{elielCruz} para se obter dados coletados por meio de um questionário estruturado com questões objetivas (fechadas) e subjetivas (abertas) que serão desenvolvidas com base nas referências desse trabalho e aplicadas nas insituições ``O'' e ``N'', duas IES's do DF que formam a amostra(???) da pesquisa.
 
-Consulte as demais normas da série ``Informação e documentação'' da ABNT
-para outras informações. Uma lista com as principais normas dessa série, todas
-observadas pelo \abnTeX, é apresentada em \citeonline{abntex2classe}.
+A decisão de utilizar as abordagens qualitativa e quantitativa é baseada no fato de que uma única abordagem metodológica não consegue alcançar os distintos objetivos da pesquisa em ciências humanas \cite{santos}, essa decisão possibilita a complementaridade essencial para esse tipo de pesquisa. Através do uso de questionários\index{questionário} é possível a coleta de dados que podem ser analisados de forma qualitativa e quantitativa de acordo com \citeonline{elielCruz}, além de que a aplicação de questionários via formulários do Google é técnicamente a única alternativa para se obter as respostas frente à realidade de distanciamento e isolamento social\index{isolamento social} que se enfrenta no DF. Os questionários serão aplicados ao corpo docente e discente. \index{corpo!docente} \index{corpo!discente}
+
+Os dados obtidos serão analisados sob a ótica da literatura visando responder os  objetivos de pesquisa enumerados na \nameref{introduction}. Esse trabalho fará uso de análises estatísticas para comparar de forma quantitativa (dados númericos) o aprendizado dos estudantes no ano de 2019 e 2020, visando alcançar o \textit{objetivo específico 03}. O \textit{objetivo específico 01} será abordado tendo como referência os estudos de \citeonline{almeida2003educaccao}, \citeonline{georgia} e \citeonline{elielCruz}, dessa forma obtera-se-á um resultado mais acurado, já que a análise não será feita com base em somente um estudo. 
+
+Os \textit{objetivos específicos 02 e 04} foram pensados com base nos trabalhos de \citeonline{zhou2020school}, \citeonline{reich2020remote}, \citeonline{huang2020handbook} e \citeonline{xie2020autonomous} e serão análisados com base nos mesmos. O \textit{objetivo específico 05} se faz necessário devido as consequências socioeconômicas da crise deflagrada pela pandemia\index{pandemia} do COVID-19, além de alguns estudos sobre EAD que deixam claro os principais problemas relacionados ao seu uso, como o acesso à internet e à ferramentas necessárias para usufruir dessa modalidade de ensino \cite{benakouche2000educaccao, arieira2009avaliaccao}.
+
+A partir dessas análises discorrer-se-á sobre a efetiva qualidade do uso da EAD durante a pandemia do COVID-19\index{COVID-19}, ficando claro se as IES's estudadas foram capazes de manter o ensino disruptivo durante o isolamento social\index{isolamento social} e se o uso da EAD\index{EAD} é uma alternativa viável para as IES's em momentos de crise.
+
+
+Conforme Prado e Valente (2002, p. 29)
+as abordagens de EaD por meio das TIC\index{TIC} podem
+ser de três tipos: broadcast, virtualização da sala
+de aula presencial ou estar junto virtual. (analisar de acordo com esse estudo em qual categoria se encaixa a abordagem utilizada pela instituição)
 
 % ----------------------------------------------------------
 % Capitulo de Recursos
 % ----------------------------------------------------------
 \chapter{Recursos}
 
-\index{elementos textuais}A norma ABNT NBR 15287:2011, p. 5, apresenta a
+%\index{elementos textuais}A norma ABNT NBR 15287:2011, p. 5, apresenta a
 seguinte orientação quanto aos elementos textuais:
 
 \begin{table}[htb]
@@ -305,7 +386,7 @@ seguinte orientação quanto aos elementos textuais:
   %\hline
    \textbf{Nível de Investigação} & \textbf{Insumos}  & \textbf{Sistemas de Investigação}  & \textbf{Produtos}  \\
     \hline
-    Meta-nível & Filosofia\index{filosofia} da Ciência  & Epistemologia &
+    Meta-nível & Filosofia da Ciência  & Epistemologia &
     Paradigma  \\
     \hline
     Nível do objeto & Paradigmas do metanível e evidências do nível inferior &
@@ -322,31 +403,30 @@ seguinte orientação quanto aos elementos textuais:
 % ----------------------------------------------------------
 \chapter{Cronograma}
 
-\index{elementos textuais}A norma ABNT NBR 15287:2011, p. 5, apresenta a
-seguinte orientação quanto aos elementos textuais:
 
-Consulte as demais normas da série ``Informação e documentação'' da ABNT
-para outras informações. Uma lista com as principais normas dessa série, todas
-observadas pelo \abnTeX, é apresentada em \citeonline{abntex2classe}.
 
 % ----------------------------------------------------------
 % Capitulo com exemplos de comandos inseridos de arquivo externo 
 % ----------------------------------------------------------
 
-\include{abntex2-modelo-include-comandos}
+%\include{abntex2-modelo-include-comandos}
 
 % ---
 % Finaliza a parte no bookmark do PDF
 % para que se inicie o bookmark na raiz
 % e adiciona espaço de parte no Sumário
 % ---
-\phantompart
+%\phantompart
 
 % ---
 % Conclusão
 % ---
 \chapter*[Considerações finais]{Considerações finais}
 \addcontentsline{toc}{chapter}{Considerações finais}
+
+Essa situação que o mundo está vivendo é um momento impar na história recente, o impacto será e está sendo sentido e continuará impactando a economia e a sociedade por alguns anos. A relevância de se realizar pesquisa científica 
+relacionadas a temas tão situacionais, mas que ficarão marcados na história da humanidade, é de extrema importância para que se entenda, no futuro próximo, as situações e dificuldades que diferentes setores da economia e sociedade passaram
+durante a \index{pandemia} do COVID-19. \index{EAD}\index{COVID-19}
 
 \lipsum[31-33]
 
@@ -375,24 +455,24 @@ observadas pelo \abnTeX, é apresentada em \citeonline{abntex2classe}.
 % ---
 % Inicia os apêndices
 % ---
-\begin{apendicesenv}
+%\begin{apendicesenv}
 
 % Imprime uma página indicando o início dos apêndices
-\partapendices
+%\partapendices
 
 % ----------------------------------------------------------
-\chapter{Quisque libero justo}
+%\chapter{Quisque libero justo}
 % ----------------------------------------------------------
 
-\lipsum[50]
+%\lipsum[50]
 
 % ----------------------------------------------------------
-\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-ac pretium ante justo a nulla curabitur tristique arcu eu metus}
+%\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
+%ac pretium ante justo a nulla curabitur tristique arcu eu metus}
 % ----------------------------------------------------------
-\lipsum[55-57]
+%\lipsum[55-57]
 
-\end{apendicesenv}
+%\end{apendicesenv}
 % ---
 
 
@@ -403,30 +483,30 @@ ac pretium ante justo a nulla curabitur tristique arcu eu metus}
 % ---
 % Inicia os anexos
 % ---
-\begin{anexosenv}
+%\begin{anexosenv}
 
 % Imprime uma página indicando o início dos anexos
-\partanexos
+%\partanexos
 
 % ---
-\chapter{Morbi ultrices rutrum lorem.}
+%\chapter{Morbi ultrices rutrum lorem.}
 % ---
-\lipsum[30]
+%\lipsum[30]
 
 % ---
-\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
-parturient montes nascetur ridiculus mus}
+%\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
+%parturient montes nascetur ridiculus mus}
 % ---
 
-\lipsum[31]
+%\lipsum[31]
 
 % ---
-\chapter{Fusce facilisis lacinia dui}
+%\chapter{Fusce facilisis lacinia dui}
 % ---
 
-\lipsum[32]
+%\lipsum[32]
 
-\end{anexosenv}
+%\end{anexosenv}
 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO
