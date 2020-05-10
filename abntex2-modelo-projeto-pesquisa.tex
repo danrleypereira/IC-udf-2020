@@ -11,7 +11,8 @@
 	arial,
 	12pt,				% tamanho da fonte
 	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
-	twoside,			% para impressão em recto e verso. Oposto a oneside
+	%twoside,			% para impressão em recto e verso. Oposto a oneside
+	oneside,
 	a4paper,			% tamanho do papel. 
 	% -- opções da classe abntex2 --
 	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
@@ -56,6 +57,14 @@
 % --- 
 % CONFIGURAÇÕES DE PACOTES
 % --- 
+
+% ---
+%%% Exemplo de \newcommand no corpo do documento.
+	%%% Embora possível, é recomendável que todas as definições do
+	%%% usuário fiquem reunidas no preâmbulo ou ainda num package.
+	%\newcommand{\X}{\checked}
+	%\newcommand{\X}{\textbullet}
+\newcommand{\X}{\textbullet}
 
 % ---
 % Configurações do pacote backref
@@ -107,7 +116,7 @@
 		pdfauthor={\@author},
     	pdfsubject={\imprimirpreambulo},
 	    pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={udf}{covid19}{uniceplac}{ead}{projeto de pesquisa}, 
+		pdfkeywords={covid19}{ead}{projeto de pesquisa}, 
 		colorlinks=true,       		% false: boxed links; true: colored links
     	linkcolor=blue,          	% color of internal links
     	citecolor=blue,        		% color of links to bibliography
@@ -169,6 +178,25 @@
 %     folha ou página distinta após a folha de rosto.''
 % ---
 
+% --- resumo em português ---
+\begin{resumo}
+Uma pandemia mundial está forçando as escolas e faculdades a fecharem suas portas. No entanto, manter a educação continua necessário, de maneira disruptiva, é claro. Como as faculdades podem manter o ensino disruptivo em meio a pandemia ? A única forma viável é através da educação a distância, principalmente usando os ambientes virtuais de aprendizagem. A educação a distância é um tema recorrente em estudos acadêmicos, existindo diferentes técnicas de aplicação. O COVID-19 é uma crise compartilhada entre todo o mundo e os seus impactos socioeconômicos precisam ser estudados de diferentes perspectivas. Analisar a eficiência do ensino durante a pandemia do COVID-19 com base na literatura existente é o principal foco desse estudo.
+\vspace{\onelineskip}
+
+\noindent
+\textbf{Palavras-chave}: covid-19. ead. educação a distância. pandemia. projeto de pesquisa. 
+\end{resumo}
+% --- resumo em francês ---
+\begin{resumo}[Abstract]
+\begin{otherlanguage*}{english}
+A worldwide pandemic is forcing faculties to close their doors. Yet the need to teach remains, on a disruptive way of course. How can faculties mantain the disruptive learning in a time of pandemic ? The only way viable is through distance education, mainly using virtual learning environments. The distance education is a recurrent theme at academic studies, having different usage techniques. The COVID-19 is a world shared crisis and its socioeconomics impacts have to be study using different perspectives. Analise the efficiency of that learn at COVID-19 pandemic accordingly to existing literature is the main focus of this proposal.
+\vspace{\onelineskip}
+
+\noindent
+\textbf{Keywords}:  covid-19. ead. distance education. pandemic. research project. 
+\end{otherlanguage*}
+\end{resumo}
+
 % ---
 % inserir lista de ilustrações
 % ---
@@ -181,7 +209,7 @@
 % inserir lista de tabelas
 % ---
 \pdfbookmark[0]{\listtablename}{lot}
-%\listoftables*
+\listoftables*
 \cleardoublepage
 % ---
 
@@ -196,6 +224,8 @@
   \item[SARS-CoV-2] Severe Acute Respiratory Syndrome Coronavirus 2
   \item[SARS] Severe Acute Respiratory Syndrome
   \item[TIC] Tecnologias de Informação e Comunicação
+  \item[UDF] Centro Universitário do Distitro Federal
+  \item[UNESCO] United Nations Educational, Scientific and Cultural Organization
 \end{siglas}
 % ---
 
@@ -227,8 +257,9 @@
 % ----------------------------------------------------------
 % Introdução
 % ----------------------------------------------------------
-\chapter*[Introdução]{Introdução} \label{introduction}
-\addcontentsline{toc}{chapter}{Introdução}
+%\chapter*[Introdução]{Introdução} \label{introduction}
+\chapter{Introdução}\label{introduction}
+%\addcontentsline{toc}{chapter}{Introdução}
 
 O presente projeto de pesquisa tem como tema o uso da Educação a Distância (EAD)\index{EAD} em tempos de pandemia \index{pandemia} do \textit{coronavirus disease 2019} (COVID-19) \index{COVID-19}. Os estudantes do ensino superior \index{ensino!superior} presencial 
 estão enfrentado um momento delicado, o isolamento social \index{isolamento social}, ou seja, eles precisam modificar hábitos para se adaptarem à EAD \cite{zhou2020school}; e para passar por esse momento eles precisam de apoio da Instituição de 
@@ -240,67 +271,50 @@ instituições de ensino, ``Instituição N'' e ``Instituição O'', já foram c
 Ambas instituições se encontram em locais de fácil acesso e não oferecem risco técnico e financeiro a realização de visitas e reuniões com os participantes da pesquisa se necessário. \index{corpo!docente} \index{corpo!discente}
 
 A hipótese desse estudo é que as IES's têm tecnologias/softwares como meio de disponibilizar vídeos, materiais, fazer video chamadas entre os professores e os alunos, disponibilizar links e recursos educacionais\index{recurso educacional},
-ou seja, elas têm um ambiente virtual de aprendizagem \index{ambiente virtual de aprendizagem}. Mas, infelizmente, possibilitar a EAD e o aprendizado autônomo dos estudantes exige mais do que ter um ambiente virtual de aprendizagem, é necessário que as IES's 
+ou seja, elas têm um ambiente virtual de aprendizagem\index{ambiente virtual de aprendizagem}. Mas, infelizmente, possibilitar a EAD e o aprendizado autônomo dos estudantes exige mais do que ter um ambiente virtual de aprendizagem, é necessário que as IES's 
 desenvolvam métodos de aconselhar academicamente os estudantes visando a efetivação e, posteriormente, a qualidade do estudo domiciliar \cite{xie2020autonomous}. Essa habilidade de aconselhar academicamente
  será um dos pontos chave de sucesso ou falha das IES's em manter o ensino disruptivo \index{ensino!disruptivo} em meio a pandemia \index{pandemia} do COVID-19. 
 
-Para ficar claro os objetivos do presente trabalho, enumerar-se-á os mesmos a seguir:
-\begin{itemize}\label{objetivos}
+O \textit{objetivo geral} da proposta aqui apresentada é identificar através de métodos quantitativos e qualitativos \index{abordagem!quantitativa} \index{abordagem!qualitativa} se as IES's estudadas conseguiram manter o ensino de maneira disruptiva durante o isolamento social\index{isolamento social} imposto focando o combate à pandemia \index{pandemia} do COVID-19. Para isso, na visão dos pesquisadores e baseado na literatura existente, criou-se alguns objetivos específicos, tais objetivos são enumerados a seguir:
 
-  \item \textit{Geral}: Identificar através de métodos quantitativos e qualitativos \index{abordagem!quantitativa} \index{abordagem!qualitativa} se as IES's estudadas conseguiram manter o ensino de maneira disruptiva durante o isolamento social\index{isolamento social} imposto focando o combate à pandemia \index{pandemia} do COVID-19.
-  \item \textit{Específico 01}: Analisar se os ambientes virtuais de aprendizagem\index{ambiente virtual de aprendizagem} das IES's estudadas são de fácil uso e se eles são capazes de ser um instrumento de ampliação de oportunidades educacionais \cite{elielCruz}.
-  \item \textit{Específico 02}: Identificar se houveram ações de aconselhamento acadêmico com foco em cultivar a habilidade de aprender em casa e melhorar a qualidade dos estudos em casa.
-  \item \textit{Específico 03}: Comparar de maneira quantitativa o aprendizado dos estudantes no ano de 2019 e 2020 (análise estatística).
-  \item \textit{Específico 04}: Analisar se os métodos normais de ensino foram simplesmente copiados ou se houve um trabalho de adaptação dos materiais e conteúdos para o ambiente virtual de aprendizagem;
-  \item \textit{Específico 05}: Alunos bolsistas ou usufrutuários de programas governamentais conseguiram usufruir dos recursos educacionais\index{recurso educacional} e efetivar a aprendizagem através do ambiente virtual de aprendizagem ?
+\begin{enumerate}
+  \item \label{obj-esp1} \textit{Específico 01}: Analisar se os ambientes virtuais de aprendizagem\index{ambiente virtual de aprendizagem} das IES's estudadas são de fácil uso e se eles são capazes de ser um instrumento de ampliação de oportunidades educacionais \cite{elielCruz}.
+  \item \label{obj-esp2} \textit{Específico 02}: Identificar se houveram ações de aconselhamento acadêmico com foco em cultivar a habilidade de aprender em casa e melhorar a qualidade dos estudos em casa.
+  \item \label{obj-esp3} \textit{Específico 03}: Comparar de maneira quantitativa o aprendizado dos estudantes no ano de 2019 e 2020 (análise estatística).
+  \item \label{obj-esp4} \textit{Específico 04}: Analisar se os métodos normais de ensino foram simplesmente copiados ou se houve um trabalho de adaptação dos materiais e conteúdos para o ambiente virtual de aprendizagem;
+  \item \label{obj-esp5} \textit{Específico 05}: Alunos bolsistas ou usufrutuários de programas governamentais conseguiram usufruir dos recursos educacionais\index{recurso educacional} e efetivar a aprendizagem através do ambiente virtual de aprendizagem ?
+  \item \label{obj-esp6} \textit{Específico 06}: Enquadrar o tipo de abordagem de cada instituição para o uso da EAD: \textit{broadcast}, virtualização da sala de aula presencial (ensino síncrono remoto) ou \textit{estar junto social}.
 
-\end{itemize}
+\end{enumerate}
 
-COVID-19\index{COVID-19} é um termo que está sendo amplamente pesquisado no \index{Brasil}Brasil e no mundo \cite{googleTrends} durante os primeiros meses de 2020, no entanto, vale ressaltar, essa pesquisa está sendo geralmente realizada atrelada à saúde pessoal e coletiva. Porém, no atual momento de isolamento social\index{isolamento social} causado pela pandemia\index{pandemia} do COVID-19, é necessário fazer pesquisa científica atrelada as consequências sociais e políticas do isolamento, tema qual o presente trabalho busca chegar a um entendimento. O uso de 
-EAD\index{EAD} ou, até mesmo, ensino remoto síncrono em IES's tem que ser estudado para que haja referências para estudos futuros relacionados a pandemia, como quais foram as consequências e impactos para o ensino superior \index{ensino!superior} brasileiro. 
-Vale ressaltar que China\index{China}, Estados Unidos da América\index{Estados Unidos da América}, \index{Filipinas}Filipinas, \index{Indonésia}Indonésia, dentre outros, além de organizações multilaterais como a UNESCO\index{UNESCO}, já começaram a publicar artigos sobre o tema educação e COVID-19 no mês de março e 
-abril de 2020:
+COVID-19\index{COVID-19} é um termo que está sendo amplamente pesquisado no \index{Brasil}Brasil e no mundo \cite{googleTrends} durante os primeiros meses de 2020, no entanto, vale ressaltar, essa pesquisa está sendo geralmente realizada atrelada à saúde pessoal e coletiva. Porém, no atual momento de isolamento social\index{isolamento social} causado pela pandemia\index{pandemia} do COVID-19, é necessário fazer pesquisa científica atrelada as consequências sociais e políticas do isolamento, tema qual o presente trabalho busca chegar a um entendimento. 
+
+O uso de EAD\index{EAD} ou, até mesmo, ensino remoto síncrono em IES's com foco em mitigar as consequências sociais (educacionais) em meio a pandemia\index{pandemia} é um tema que tem que ser estudado para possibilitar referências para estudos futuros, principalmente os estudos que irão focar nas consequências e impactos para o ensino superior \index{ensino!superior} brasileiro; além de, é claro, saber se é viável o uso desses métodos de ensino-aprendizado \index{ensino!-aprendizagem} em momentos de crise.Vale ressaltar que China\index{China}, Estados Unidos da América\index{Estados Unidos da América}, \index{Filipinas}Filipinas, \index{Indonésia}Indonésia, dentre outros, além de organizações multilaterais como a United Nations Educational, Scientific and Cultural Organization (UNESCO)\index{UNESCO}, já começaram a publicar artigos sobre o tema educação e COVID-19 no mês de março e abril de 2020:
 
 \begin{itemize}
 
   \item Autonomous learning of elementary students at home during the COVID-19 epidemic: A case study of the second elementary school in Daxie, Ningbo, Zhejiang Province, China \cite{xie2020autonomous};
   \item Replacing the Classic Learning Form at Universities as an Immediate Response to the COVID-19 Virus Infection in Georgia \cite{georgia};
-  \item 'School’s Out, But Class’ On', The Largest Online Education in the World Today: Taking China’s Practical Exploration During The COVID-19 Epidemic Prevention and Control As an Example \cite{zhou2020school};
+  \item `School’s Out, But Class’ On', The Largest Online Education in the World Today: Taking China’s Practical Exploration During The COVID-19 Epidemic Prevention and Control As an Example \cite{zhou2020school};\index{``School’s Out, But Class’ On''}
   \item Sentiment Analysis on Synchronous Online Delivery of Instruction due to Extreme Community Quarantine in the Philippines caused by COVID-19 Pandemic \cite{pastor2020sentiment};
   \item Using Technology to Maintain the Education of Residents During the COVID-19 Pandemic \cite{chick2020using}
   \item The Impact of Covid-19\index{COVID-19} to Indonesian Education and Its Relation to the Philosophy of “Merdeka Belajar” \cite{abidah2020impact};
-  \item handbook-on-facilitating-flexible-learning-in-covid-19-outbreak \cite{huang2020handbook};
+  \item Handbook on Facilitating Flexible Learning During Educational Disruption: The Chinese Experience in Maintaining Undisrupted Learning in COVID-19 Outbreak \cite{huang2020handbook};
+  \item Education Emergencies \cite{unesco};\index{UNESCO}
   \item Public-Private Virtual-School Partnerships and Federal Flexibility for Schools during COVID-19 \cite{butcher2020public}.
 
 \end{itemize}
 
 Tantos artigos científicos sendo publicados em tão pouco tempo é um sinal claro da relevância de um estudo tal como o proposto aqui. 
- 
-
-
-
-é necessário que as IES's analisem suas estratégias de orientação e se os materiais de orientação acadêmica são bem desenhados.
-
-
-A análise será feita através de 
-
-
-Sinta-se convidado a participar do projeto \abnTeX! Acesse o site do projeto em
-\url{http://www.abntex.net.br/}. Também fique livre para conhecer,
-estudar, alterar e redistribuir o trabalho do \abnTeX, desde que os arquivos
-modificados tenham seus nomes alterados e que os créditos sejam dados aos
-autores originais, nos termos da ``The \LaTeX\ Project Public
-License''\footnote{\url{http://www.latex-project.org/lppl.txt}}.
-
 
 % ----------------------------------------------------------
 % Capitulo de Referencial Teórico
 % ----------------------------------------------------------
 \chapter{Revisão de Literatura}
 
-Como já mencionado, o presente projeto de pesquisa busca entender o uso e a qualidade do uso da EAD\index{EAD} no momento de pandemia\index{pandemia} do COVID-19, com isso em mente fez-se uma expressão geral de busca expressão de busca de trabalhos acadêmicos em sítios como \url{http://www.scielo.com}, \url{http://scholar.google.com}, \url{https://www.researchgate.net}, \url{http://www.scielo.com} e \url{http://www.periodicocapes.com}; a expressão ``Educação a distância AND COVID-19'' não se fez útil na tentativa de encontrar trabalhos acadêmicos em português. Sem êxito, buscou-se a mesma expressão em inglês, obtendo melhor resultado. Como era de se esperar, os resultados são trabalhos acadêmicos recentes, todos datados do ano de 2020.  \index{COVID-19}
+Como já mencionado, o presente projeto de pesquisa busca entender o uso e a qualidade do uso da EAD\index{EAD} e de métodos de ensino remoto síncrono no momento de pandemia\index{pandemia} do COVID-19, com isso em mente fez-se uma expressão geral de busca de trabalhos acadêmicos em sítios como \url{http://www.scielo.com}, \url{http://scholar.google.com}, \url{https://www.researchgate.net}, \url{http://www.scielo.com} e \url{http://www.periodicocapes.com}; a expressão ``Educação a distância AND COVID-19'' não se fez útil na tentativa de encontrar trabalhos acadêmicos em português. Sem êxito, buscou-se a mesma expressão em inglês, obtendo melhor resultado. Como era de se esperar, os resultados são trabalhos acadêmicos recentes, todos datados do ano de 2020.  \index{COVID-19}
 
-Além dessa expressão de busca, fez-se necessário expressões de buscas como: ``Viable alternative AND distance education'' e ``COVID-19 OR Distance education''. Essas expressões fizeram-se necessárias para que os pesquisadores possam fazer um levantamento bibliográfico sobre cada tema separado, buscando-se propriedade sobre o tema de interesse do trabalho, visando sempre uma análise mais acurada para se obter maior qualidade no resultado da pesquisa.
+Além dessa expressão de busca, fez-se necessário expressões de buscas como: ``\textit{Viable alternative} AND \textit{distance education}'' e ``COVID-19 OR \textit{Distance education}''. Essas expressões fizeram-se necessárias para que os pesquisadores possam fazer um levantamento bibliográfico sobre cada tema separado, buscando-se propriedade sobre o tema de interesse do trabalho, visando sempre uma análise mais acurada para se obter maior qualidade no resultado da pesquisa.
 
 \section{COVID-19}
 
@@ -308,7 +322,9 @@ COVID-19 é uma infecção respiratória causada pelo vírus\index{vírus} \text
 
 COVID-19 causa uma variedade de sintomas em pessoas que foram infectadas, e nem todas as pessoas infectadas terão os mesmo sintomas. Febre, tosse seca, dificuldade de respirar e fadiga são alguns dos sintomas mais comuns; entretanto, algumas pessoas apresentaram dores de cabeça, dores abdominais, diarreia e garganta inflamada \cite{desai2020stopping}. Muitas pessoas desenvolvem sintomas brandos ou nenhum sintoma; as mortes são associadas principalmente à pessoas idosas e/ou com doenças crônicas\index{doenças crônicas} \cite{watkins2020preventing}. 
 
-Modelos epidemiológicos\index{epidemiologia} básicos do avanço do vírus SARS-CoV-2 sugerem que, devido a sua alta contagiosidade e a falta de imunidade da população, 40 a 70 porcento da população poderá ser infectada a não ser que medidas duras sejam tomadas \cite{salathe2020covid}. Dois vírus\index{vírus} tiveram suas deflagrações encurtadas por uma política de \textit{catch-and-isolate} (pegar-e-isolar), o \textit{severe acute respiratory syndrome} (SARS)\index{SARS} em 2003 e o H1N1 (Influenza A)\index{H1N1} em 2009 \cite{watkins2020preventing}, ou seja, isolar as pessoas que foram contaminadas por esses vírus\index{vírus} foi eficaz para ambos os casos. Infelizmente, o COVID-19, mesmo adotando-se essa política mundo afora, continuou se espalhando, exigindo medidas mais drásticas dos governos, isolamento e distanciamento social\index{isolamento social}, fechando-se fronteiras e colocando países inteiros em quarentena. 
+Modelos epidemiológicos\index{epidemiologia} básicos do avanço do vírus SARS-CoV-2 sugerem que, devido a sua alta contagiosidade e a falta de imunidade da população, 40 a 70 porcento da população poderá ser infectada a não ser que medidas duras sejam tomadas \cite{salathe2020covid}. Dois vírus\index{vírus} tiveram suas deflagrações encurtadas por uma política de \textit{catch-and-isolate} (pegar-e-isolar), o \textit{Severe Acute Respiratory Syndrome} (SARS)\index{SARS} em 2003 e o H1N1 (Influenza A)\index{H1N1} em 2009 \cite{watkins2020preventing}, ou seja, isolar as pessoas que foram contaminadas por esses vírus\index{vírus} foi eficaz para ambos os casos. Infelizmente, o COVID-19, mesmo adotando-se essa política mundo afora, continuou se espalhando, exigindo medidas mais drásticas dos governos, isolamento e distanciamento social\index{isolamento social}, fechando-se fronteiras e colocando países inteiros em quarentena. 
+
+Baseado em dados obtidos pela \citeonline{unesco}, mais de 160 países implementaram medidas nacionais contra o COVID-19\index{COVID-19}, afetando mais da metade da população mundial de estudantes. As últimas estatísticas da UNESCO\index{UNESCO} (20/04/2020) mencionava que mais de 1.6 bilhões de estudantes foram afetados pelo COVID-19, isso é quase 90 porcento do total de estudantes matriculados em instituições de ensino. A UNESCO está dando suporte direto aos países, incluindo soluções de ensino à distância para assegurar a continuidade do ensino para todos.
 
 \section{EAD}
 
@@ -325,7 +341,7 @@ Até pouco tempo atrás as Tecnologias de Informação e Comunicação (TIC\inde
 
 \section{Uso de EAD em meio a pandemia: uma alternativa}
 
-A principal referência que temos ao uso da EAD nesse momento de isolamento social\index{isolamento social} é a China\index{China}, que já vem encarando o COVID-19\index{COVID-19} desde de dezembro de 2019. O governo chinês lançou uma campanha nomeada ``School’s Out, But Class’ On'' durante a pandemia\index{pandemia}; \citeonline{zhou2020school} analizou a fundamentação e os possíveis impactos da campanha, focando nas recomendações do \index{Ministério da Educação da China}Ministério da Educação da China e as estratégias necessárias para que a campanha seja bem sucedida. Outro documento de caráter científico que podemos usar como referência é um estudo de caso de uma escola em Daxie-Ningbo na \index{Província de Zhejiang}Província de Zhejiang-China, um estudo de caso da campanha ``School’s Out, But Class’ On''\index{``School’s Out, But Class’ On''}.
+A principal referência que temos ao uso da EAD nesse momento de isolamento social\index{isolamento social} é a China\index{China}, que já vem encarando o COVID-19\index{COVID-19} desde de dezembro de 2019. O governo chinês lançou uma campanha nomeada ``School’s Out, But Class’ On'' durante a pandemia\index{pandemia}; \citeonline{zhou2020school} analizou a fundamentação e os possíveis impactos da campanha, focando nas recomendações do \index{Ministério da Educação da China}Ministério da Educação da China e as estratégias necessárias para que a campanha seja bem sucedida. Outro documento de caráter científico que podemos usar como referência é um estudo de caso de uma escola em Daxie-Ningbo na \index{Província de Zhejiang}Província de Zhejiang-China \cite{xie2020autonomous}, um estudo de caso da campanha ``School’s Out, But Class’ On''\index{``School’s Out, But Class’ On''}.
 
 A partir dessas referências e devido as circuntâncias, é claro que a EAD\index{EAD} é uma alternativa viável em meio a pandemia\index{pandemia}, porém se faz necessário uma análise acurada para verificar se a construção do conhecimento foi efetuada. Essa análise tem que ser feita através de diferentes perspectivas:
 
@@ -339,14 +355,7 @@ A partir dessas referências e devido as circuntâncias, é claro que a EAD\inde
 
 \end{itemize}
 
-Tendo em vista todos os estudos citados, a verificação da qualidade do uso da EAD pode ser feita através de um estudo de caso em instituições reais.
-
-
-
- se a decisão se encaixa, mesmo que de maneira genérica, para todas as IES's. 
-
-
-
+Tendo em vista todos os estudos citados, a constatação da continuidade do ensino e a verificação da qualidade do uso da EAD podem ser feitas através de um estudo de caso em instituições reais.
 
 
 % ----------------------------------------------------------
@@ -354,56 +363,82 @@ Tendo em vista todos os estudos citados, a verificação da qualidade do uso da 
 % ----------------------------------------------------------
 \chapter{Metodologia}
 
-Tendo em vista a necessidade de \index{isolamento social}isolamento social para diminuir o avanço do COVID-19\index{COVID-19}, a EAD\index{EAD} está sendo a escolha óbvia para manter o ensino disruptivo nas IES's do \index{Brasil}Brasil e do Mundo. No entanto, é necessário fazer uma análise baseada na literatura existente sobre o assunto para descobrir se as IES's conseguiram manter o \index{ensino!disruptivo}ensino disruptivo meio a pandemia\index{pandemia}. Para realizar essa análise o presente estudo utilizará uma abordagem quanti-qualitativa \index{abordagem!quantitativa} \index{abordagem!qualitativa} \cite{elielCruz} para se obter dados coletados por meio de um questionário estruturado com questões objetivas (fechadas) e subjetivas (abertas) que serão desenvolvidas com base nas referências desse trabalho e aplicadas nas insituições ``O'' e ``N'', duas IES's do DF que formam a amostra(???) da pesquisa.
+Haja vista a necessidade de \index{isolamento social}isolamento social para diminuir o avanço do COVID-19\index{COVID-19}, a EAD\index{EAD} está sendo a escolha óbvia para manter o ensino disruptivo nas IES's do \index{Brasil}Brasil e do Mundo. No entanto, é necessário fazer uma análise baseada na literatura existente sobre o assunto para descobrir se as IES's conseguiram manter o \index{ensino!disruptivo}ensino disruptivo meio a pandemia\index{pandemia}. Para realizar essa análise o presente estudo utilizará uma abordagem quanti-qualitativa \index{abordagem!quantitativa} \index{abordagem!qualitativa} \cite{elielCruz} para se obter dados coletados por meio de um questionário estruturado com questões objetivas (fechadas) e subjetivas (abertas) que serão desenvolvidas com base na revisão de literatura desse trabalho e aplicadas nas insituições ``O'' e ``N'', duas IES's do DF que formam a amostra(???) da pesquisa.
 
-A decisão de utilizar as abordagens qualitativa e quantitativa é baseada no fato de que uma única abordagem metodológica não consegue alcançar os distintos objetivos da pesquisa em ciências humanas \cite{santos}, essa decisão possibilita a complementaridade essencial para esse tipo de pesquisa. Através do uso de questionários\index{questionário} é possível a coleta de dados que podem ser analisados de forma qualitativa e quantitativa de acordo com \citeonline{elielCruz}, além de que a aplicação de questionários via formulários do Google é técnicamente a única alternativa para se obter as respostas frente à realidade de distanciamento e isolamento social\index{isolamento social} que se enfrenta no DF. Os questionários serão aplicados ao corpo docente e discente. \index{corpo!docente} \index{corpo!discente}
+A decisão de utilizar as abordagens qualitativa e quantitativa é baseada no fato de que uma única abordagem metodológica não consegue alcançar os distintos objetivos da pesquisa em ciências humanas \cite{santos}, essa decisão possibilita a complementaridade essencial para esse tipo de pesquisa. Através do uso de questionários\index{questionário} é possível a coleta de dados que podem ser analisados de forma qualitativa e quantitativa de acordo com \citeonline{elielCruz}, além de que a aplicação de questionários via formulários do Google\index{Google Forms} é técnicamente a única alternativa para se obter as respostas frente à realidade de distanciamento e isolamento social\index{isolamento social} que se enfrenta no DF. Os questionários serão aplicados ao corpo docente e discente das duas instituições. \index{corpo!docente} \index{corpo!discente}
 
-Os dados obtidos serão analisados sob a ótica da literatura visando responder os  objetivos de pesquisa enumerados na \nameref{introduction}. Esse trabalho fará uso de análises estatísticas para comparar de forma quantitativa (dados númericos) o aprendizado dos estudantes no ano de 2019 e 2020, visando alcançar o \textit{objetivo específico 03}. O \textit{objetivo específico 01} será abordado tendo como referência os estudos de \citeonline{almeida2003educaccao}, \citeonline{georgia} e \citeonline{elielCruz}, dessa forma obtera-se-á um resultado mais acurado, já que a análise não será feita com base em somente um estudo. 
+Os dados obtidos serão analisados sob a ótica da literatura visando responder os  objetivos de pesquisa enumerados na \nameref{introduction}. Esse trabalho fará uso de análises estatísticas para comparar de forma quantitativa (dados númericos) o aprendizado dos estudantes no ano de 2019 e 2020, visando alcançar o \textit{objetivo específico 0\ref{obj-esp3}}. O \textit{objetivo específico 0\ref{obj-esp1}} será abordado tendo como referência os estudos de \citeonline{almeida2003educaccao}, \citeonline{georgia} e \citeonline{elielCruz}, dessa forma obtera-se-á um resultado mais acurado, já que a análise não será feita com base em somente um estudo. 
 
-Os \textit{objetivos específicos 02 e 04} foram pensados com base nos trabalhos de \citeonline{zhou2020school}, \citeonline{reich2020remote}, \citeonline{huang2020handbook} e \citeonline{xie2020autonomous} e serão análisados com base nos mesmos. O \textit{objetivo específico 05} se faz necessário devido as consequências socioeconômicas da crise deflagrada pela pandemia\index{pandemia} do COVID-19, além de alguns estudos sobre EAD que deixam claro os principais problemas relacionados ao seu uso, como o acesso à internet e à ferramentas necessárias para usufruir dessa modalidade de ensino \cite{benakouche2000educaccao, arieira2009avaliaccao}.
+Os \textit{objetivos específicos 0\ref{obj-esp2} e 0\ref{obj-esp4}} foram pensados com base nos trabalhos de \citeonline{zhou2020school}, \citeonline{reich2020remote}, \citeonline{huang2020handbook} e \citeonline{xie2020autonomous} e serão análisados com base nos mesmos. O \textit{objetivo específico 0\ref{obj-esp5}} se faz necessário devido as consequências socioeconômicas da crise deflagrada pela pandemia\index{pandemia} do COVID-19, além de alguns estudos sobre EAD que deixam claro os principais problemas relacionados ao seu uso, como o acesso à internet e à ferramentas necessárias para usufruir dessa modalidade de ensino \cite{benakouche2000educaccao, arieira2009avaliaccao}.
+
+Conforme \citeonline{pradoValente} existem três abordagens de EAD por meio das TIC\index{TIC}: \textit{broadcast}, virtualização da sala de aula presencial (ensino síncrono remoto) ou \textit{estar junto social}. Na abordagem \textit{broadcast} a tecnologia computacional é usada para entregar informações aos estudantes como ocorre no rádio e na televisão. A sala de aula presencial é o que denominamos nesse estudo de ensino remoto síncrono, o que exige o paradigma do espaço-tempo, ou seja, uma comuicação bidirecional entre professor e aluno que se encontram no mesmo horário e no mesmo espaço (ferramenta de videoconferência). O \textit{estar junto social} explora a interatividade das TIC\index{TIC} por meio da comunicação multidimensional \cite{almeida2003educaccao}, o que permiti criar condições de aprendizagem e colaboração. O \textit{objetivo específico 0\ref{obj-esp6}} será analisado com base na perspectiva desses autores.
 
 A partir dessas análises discorrer-se-á sobre a efetiva qualidade do uso da EAD durante a pandemia do COVID-19\index{COVID-19}, ficando claro se as IES's estudadas foram capazes de manter o ensino disruptivo durante o isolamento social\index{isolamento social} e se o uso da EAD\index{EAD} é uma alternativa viável para as IES's em momentos de crise.
-
-
-Conforme Prado e Valente (2002, p. 29)
-as abordagens de EaD por meio das TIC\index{TIC} podem
-ser de três tipos: broadcast, virtualização da sala
-de aula presencial ou estar junto virtual. (analisar de acordo com esse estudo em qual categoria se encaixa a abordagem utilizada pela instituição)
-
-% ----------------------------------------------------------
-% Capitulo de Recursos
-% ----------------------------------------------------------
-\chapter{Recursos}
-
-%\index{elementos textuais}A norma ABNT NBR 15287:2011, p. 5, apresenta a
-seguinte orientação quanto aos elementos textuais:
-
-\begin{table}[htb]
-\ABNTEXfontereduzida
-\caption[Níveis de investigação]{Níveis de investigação.}
-\label{tab-nivinv}
-\begin{tabular}{p{2.6cm}|p{6.0cm}|p{2.25cm}|p{3.40cm}}
-  %\hline
-   \textbf{Nível de Investigação} & \textbf{Insumos}  & \textbf{Sistemas de Investigação}  & \textbf{Produtos}  \\
-    \hline
-    Meta-nível & Filosofia da Ciência  & Epistemologia &
-    Paradigma  \\
-    \hline
-    Nível do objeto & Paradigmas do metanível e evidências do nível inferior &
-    Ciência  & Teorias e modelos \\
-    \hline
-    Nível inferior & Modelos e métodos do nível do objeto e problemas do nível inferior & Prática & Solução de problemas  \\
-   % \hline
-\end{tabular}
-\legend{Fonte: \citeonline{van86}}
-\end{table}
 
 % ----------------------------------------------------------
 % Capitulo de Cronograma
 % ----------------------------------------------------------
-\chapter{Cronograma}
+\chapter{Cronograma  e Recursos}
 
+Esse projeto de pesquisa está sendo proposto por um aluno e um professor do curso de Análise e Desenvolvimento de Sistemas do Centro Universitário do Distitro Federal (UDF). Danrley Pereira será o aluno pesquisador do projeto de Iniciação Científica da UDF com a orientação do professor Eliel Cruz, ambos trabalharão juntos para a elaborar dois questionários, um para o corpo docente e outro para o corpo discente, visando a obtenção de dados acurados e fidedignos através de uma ferramenta gratuita chamada da \index{Google Forms}\textit{Google Forms}.
 
+Poucos são os recursos materiais e financeiros necessários à realização desse trabalho de pesquisa, pois os questionários serão aplicados através da rede mundial de computadores (internet), sendo necessário uma ou duas visitas às instituições ``O'' e ``N'' para alinhar o plano de obtenção dos dados e para analisar as questões éticas e morais atreladas à natureza dessa proposta. A própria ferramenta utilizada para aplicação dos questionários já faz uma análise estatística, no entanto, para uma análise mais acurada utilizar-se-á bibliotecas gratuitas de análise de dados da linguagem de programação \index{Python}Python. 
+
+ Abaixo estão enumeradas as ações necessárias para realização do trabalho de pesquisa, as ações são apresentadas na ordem que começarão a ser realizadas.
+
+\begin{enumerate}
+	\item \label{rev-lit} Revisão de literatura;
+	\item \label{ela-quest} Elaboração dos questionários com base na literatura;
+	\item \label{vis-inst}  Visita as instituições da amostra;
+	\item \label{aplic-quest} Aplicação dos questionários para o corpo docente e discente;
+	\item \label{anI} Análise quantivativa (estatística) dos dados obtidos;
+	\item \label{anII} Análise qualitativa dos dados obtidos;
+	\item \label{rp} Relatório parcial junto à primeira versão do trabalho;
+	\item \label{pf} Relatório final e versão corrigida do trabalho.
+\end{enumerate}
+
+A revisão de literatura deverá ser feita pelo aluno pesquisador, buscando usar alguns elementos de revisão sistemática de literatura, através de um protocolo de revisão. Em paralelo à revisão de literatura, fazer-se-á os questionários, haja vista que os questionários são baseados na literatura e serão de mais fácil elaboração durante a revisão. As visitas as duas IES's por ambos os pesquisadores (aluno e orientador), ``Instituição N'' e ``Instituição O'', busca a transparência entre os envolvidos nesse trabalho de pesquisa, não obstante, facilitar a ação número 04. Como já explicitado, a análise quantitativa deverá ser realizada usando-se a linguagem de programação Python\index{Python}. A análise qualitativa deverá ser feita com maior atenção por parte dos pesquisadores, pois essa é a análise necessária para se alcançar a maioria dos objetivos específicos desse trabalho, não sendo realizada corretamente, põem-se em risco todo o estudo. A versão parcial do trabalho deverá ser entregue para devida análise e correção do professor orientador, junto a membros do corpo docente interessados; já a versão final virá acompanhada de uma apresentação oral e visual para o evento anual de iniciação científica da UDF.
+
+	%%% Exemplo de \newcommand no corpo do documento.
+	%%% Embora possível, é recomendável que todas as definições do
+	%%% usuário fiquem reunidas no preâmbulo ou ainda num package.
+	%\newcommand{\X}{\checked}
+	%\newcommand{\X}{\textbullet}
+	
+	A Tab.~\ref{tab:bullets} mostra o cronograma que deve ser seguido para realização desse trabalho. O símbolo
+	`\X' foi usado para mostrar os respectivos meses estimados para cada ação.
+	
+	\begin{table}[htbp]
+	  \centering
+	  \begin{tabular}{|l||c|c|c|c|c|c|c|c|}
+	    \hline
+	    \multicolumn{9}{|c|}{\textbf{2020-2021}} \\
+	    \hline
+	    \hline
+	    Fase  & Agosto & Setembro & Outubro & Novembro & Dezembro & Janeiro & Fevereiro &  Março \\
+	    \hline
+	    \ref{rev-lit}     & \X & \X & \X &     &      &      &     &     \\
+	 \hline
+	    \ref{ela-quest}     &     & \X & \X &     &      &      &     &      \\
+	\hline
+	    \ref{vis-inst}     &     &     & \X & \X  &      &     &     &      \\
+	\hline
+	    \ref{aplic-quest}     &     &     &     & \X &  \X &      &     &      \\
+	\hline
+	    \ref{anI}     &     &     &      &      &     & \X &      &       \\
+	\hline
+	    \ref{anII}     &     &     &      &      &      & \X & \X &       \\
+	\hline
+	    \ref{rp}     &     &     &      &      &      &      & \X &       \\
+	\hline
+	    \ref{pf}     &     &     &      &      &      &      &     & \X   \\
+	   % 9     &     &     &      &      &      &      &     & \X \\
+	    \hline
+	    \hline
+	  \end{tabular}
+	  \caption{Cronograma de Ação}%\eng{bullets}}
+	  \label{tab:bullets}
+	\end{table}
 
 % ----------------------------------------------------------
 % Capitulo com exemplos de comandos inseridos de arquivo externo 
@@ -421,14 +456,19 @@ seguinte orientação quanto aos elementos textuais:
 % ---
 % Conclusão
 % ---
-\chapter*[Considerações finais]{Considerações finais}
-\addcontentsline{toc}{chapter}{Considerações finais}
+%\chapter*[Considerações finais]{Considerações finais}
+\chapter{Considerações finais}
+%\addcontentsline{toc}{chapter}{Considerações finais}
 
 Essa situação que o mundo está vivendo é um momento impar na história recente, o impacto será e está sendo sentido e continuará impactando a economia e a sociedade por alguns anos. A relevância de se realizar pesquisa científica 
 relacionadas a temas tão situacionais, mas que ficarão marcados na história da humanidade, é de extrema importância para que se entenda, no futuro próximo, as situações e dificuldades que diferentes setores da economia e sociedade passaram
-durante a \index{pandemia} do COVID-19. \index{EAD}\index{COVID-19}
+durante a pandemia\index{pandemia} do COVID-19. \index{EAD}\index{COVID-19}
 
-\lipsum[31-33]
+Com isso em mente, estudar o impacto do COVID-19 na educação, um importante setor social, é mais do que necessário. As dificuldades são inúmeras, mas não podemos desanimar diante desse cenário; a contribuição social da pesquisa proposta é evidente e se faz necessária para que a humanidade gere conhecimentos relacionados à pandemia\index{pandemia}, tendo sempre em vista o auxílio à sociedade e as gerações futuras que, com toda a certeza, enfrentarão crises parecidas. 
+
+O objetivo desse projeto de pesquisa foi propor um trabalho de pesquisa necessário na área de educação, mais especificamente o uso da EAD\index{EAD} e do ensino remoto síncrono como fator de mitigação das consequências do isolamento social na vida do estudante do ensino superior\index{ensino!superior}. A partir da análise literaria, desenvolveu-se a hipótese de que a EAD é uma maneira de manter o ensino disruptivo de qualidade em meio a pandemia do COVID-19.
+
+
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
