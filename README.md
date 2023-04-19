@@ -7,6 +7,11 @@
  
 [download](https://miktex.org/download)
 
+### install texlive
+sudo apt-get install texlive-full
+#### just packages needed
+sudo apt-get install texlive-publishers texlive-lang-portuguese texlive-latex-extra texlive-fonts-recommended
+
 ### TexWorks (editor)
 
 [download](https://github.com/TeXworks/texworks/releases)
